@@ -247,13 +247,19 @@ ol {
   text-transform: uppercase;
 }
 
-.content__accent {
+.content__accent:first-child {
   color: #545050;
-  .dash {
-    position: relative;
-    top: -6px; /*war with dash*/
-    left: 1px;
-  }
+}
+
+.dash {
+  position: relative;
+  top: -6px; /*war with dash*/
+  left: 1px;
+  color: #545050;
+}
+
+.content__accent {
+  color: #ffffff;
 }
 
 .content__list-container {
