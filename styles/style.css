@@ -13,9 +13,12 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center; /*горизонт*/
+  align-items: center;
 }
 
 h1,
@@ -50,12 +53,6 @@ ol {
   background-color: #d9d9d9;
 }
 
-.page {
-  display: flex;
-  justify-content: center; /*горизонт*/
-  align-items: center;
-}
-
 .content {
   display: flex;
   align-items: center;
@@ -69,6 +66,10 @@ ol {
   justify-content: space-between;
   align-items: flex-end;
   display: flex;
+}
+
+.result {
+  padding-bottom: 20px;
 }
 
 .result__video-container {
@@ -89,10 +90,11 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  line-height: 1;
 }
 
 .search-form__fieldset:nth-child(2) {
@@ -100,7 +102,7 @@ ol {
 }
 
 .search-form__label {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #ffffff;
@@ -131,16 +133,17 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
+  height: 28px;
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   background-color: transparent; /*прозрачный фон*/
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #ffffff;
-  padding-left: 1px;
+  line-height: 1;
+  padding-left: 0px;
   appearance: none;
   outline: none;
 }
@@ -197,13 +200,13 @@ ol {
 
 .button {
   border: 1px solid white;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: auto;
   color: #ffffff;
   background-color: transparent;
-  height: 34px;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
@@ -213,9 +216,9 @@ ol {
 
 .more-button {
   width: 100%;
-  height: 34px;
   flex-shrink: 0; /*не сжиматься*/
   margin-top: auto; /*к низу*/
+  margin-bottom: 20px;
 }
 
 .button:hover {
@@ -240,26 +243,23 @@ ol {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
-.content__accent:first-child {
+.content__accent {
   color: #545050;
 }
 
 .dash {
   position: relative;
-  top: -6px; /*war with dash*/
+  top: -4px; /*war with dash*/
   left: 1px;
   color: #545050;
-}
-
-.content__accent {
-  color: #ffffff;
 }
 
 .content__list-container {
@@ -276,26 +276,27 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 20px;
-}
-
-.content__list-item:hover {
-  text-decoration: underline;
-  text-underline-offset: 2.5px;
-  text-decoration-thickness: 0.5px;
-}
-.content__list-item:active {
-  background-color: #545050;
-}
-
-.content__list-item:focus-visible {
-  outline: #ffffff;
-  padding: 0px 3px 0px 3px;
 }
 
 .content__card-link {
   text-decoration: none;
   display: block;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  text-decoration-thickness: 0.5px;
+  text-decoration-color: white;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
+  padding: 0px 3px 0px 3px;
 }
 
 .content__card-link_current {
@@ -305,45 +306,48 @@ ol {
 .content__video-card {
   display: flex;
   align-items: flex-start; /*прижимает элементы*/
-  row-gap: 50px;
 }
 
 .content__video-card-description-container {
-  flex-grow: 1; /*занимает всё оставшееся пространство*/
+  flex: 1;
   min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
   color: white;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  white-space: nowrap; /*не переносить*/
+  overflow: hidden; /*скрыть выходящий текст*/
+  text-overflow: ellipsis; /*многоточие*/
   padding-left: 2px;
-  line-height: 1.2;
+  line-height: 1;
+  padding-bottom: 5px;
+  padding-top: 2px;
 }
 
 .content__video-card-description {
   font-weight: 400;
-  font-size: 15px;
-  line-height: 1.2;
-  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  line-height: 16.2px;
+  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
   color: white;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   padding-left: 2px;
-  letter-spacing: 1.5px;
 }
 
 .content__video-card-thumbnail {
-  width: 185px;
-  min-height: 100px;
+  width: 195px;
+  min-width: 195px;
+  height: 104px;
   object-fit: cover; /*заполнение контейнера*/
   object-position: center; /*центрирование изображения*/
 }
