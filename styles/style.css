@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   display: flex;
@@ -90,7 +90,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 8px;
@@ -102,10 +102,10 @@ ol {
 }
 
 .search-form__label {
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif ;
   font-weight: 400;
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   align-items: center;
   width: fit-content;
@@ -138,12 +138,12 @@ ol {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   background-color: transparent; /*прозрачный фон*/
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   line-height: 1;
-  padding-left: 0px;
+  padding-left: 0;
   appearance: none;
   outline: none;
 }
@@ -164,7 +164,7 @@ ol {
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 1px;
   display: flex;
   align-items: center;
@@ -183,7 +183,7 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   opacity: 1;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 /* подчеркивание только лейбла с чекбоксами */
@@ -200,11 +200,11 @@ ol {
 
 .button {
   border: 1px solid white;
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: auto;
-  color: #ffffff;
+  color: #fff;
   background-color: transparent;
   min-height: 34px;
 }
@@ -233,7 +233,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid white;
+  outline: 1px solid #fff;
   outline-offset: 1px; /*расстояние от контура*/
 }
 
@@ -243,7 +243,7 @@ ol {
 }
 
 .title {
-  font-family: "Oswald", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', 'Franklin Gothic Medium', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -287,7 +287,7 @@ ol {
   text-decoration: underline;
   text-underline-offset: 1px;
   text-decoration-thickness: 0.5px;
-  text-decoration-color: white;
+  text-decoration-color: #fff;
 }
 
 .content__card-link:active {
@@ -295,7 +295,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #ffffff;
+  outline: 1px solid #fff;
   padding: 0px 3px 0px 3px;
 }
 
@@ -317,11 +317,11 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald", "Arial Narrow", "Franklin Gothic Medium", sans-serif;
+  font-family: 'Oswald', 'Arial Narrow', 'Franklin Gothic Medium', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
-  color: white;
+  color: #fff;
   white-space: nowrap; /*не переносить*/
   overflow: hidden; /*скрыть выходящий текст*/
   text-overflow: ellipsis; /*многоточие*/
@@ -335,8 +335,8 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  font-family: "Fira Sans Condensed", "Arial Narrow", Arial, sans-serif;
-  color: white;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
